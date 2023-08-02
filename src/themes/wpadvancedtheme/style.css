@@ -24,3 +24,12 @@ img {
 .updated:not(.published) {
     display: none;
 }
+
+.page-numbers.current > span {
+    background-color: rgb(176, 176, 176);
+    color: white;
+}
+.page-numbers span:hover {
+    background-color: rgb(176, 176, 176);
+    color: white;
+}

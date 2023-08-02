@@ -36,6 +36,11 @@
                      <?php else : ?>
                          <?php get_template_part( 'template-parts/content-none' ); ?>
              <?php endif; ?>
+
+             <?php
+                previous_post_link();
+                next_post_link();
+            ?>
  
          </div>
          
