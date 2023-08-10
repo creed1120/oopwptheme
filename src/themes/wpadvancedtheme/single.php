@@ -14,34 +14,42 @@
  
          <div class="container">
  
-         <!-- <//?php get_template_part( 'template-parts/content-test' ); ?> -->
+                <!-- <//?php get_template_part( 'template-parts/content-test' ); ?> -->
  
              <?php if ( have_posts() ) : ?>
  
-                     <?php if ( is_home() && ! is_front_page() ) ?>
-                         <!-- <header class="mb-5">
-                             <h1 class="page-title"><//?php single_post_title(); ?></h1>
-                         </header> -->
+                <div class="row">
+                    
+                    <div class="col-lg-3 col-md-3 col-sm-12">
+                        <?php get_sidebar( 'sidebar-single' ); ?>
+                    </div>
+                
+                    <?php if ( is_home() && ! is_front_page() ) ?>
+                    <!-- <header class="mb-5">
+                        <h1 class="page-title"><//?php single_post_title(); ?></h1>
+                    </header> -->
 
-                         <?php 
-                             // the WP Loop
-                             while ( have_posts() ) : the_post(); ?>
- 
-                                 <div class="col-12">
-                                     <?php get_template_part( 'template-parts/content' ); ?>
-                                 </div>
- 
-                         <?php endwhile; ?>
+                    <?php 
+                        // the WP Loop
+                        while ( have_posts() ) : the_post(); ?>
 
-                     <?php else : ?>
-                         <?php get_template_part( 'template-parts/content-none' ); ?>
-             <?php endif; ?>
+                            <div class="col-lg-9 col-md-9 col-sm-12">
+                                <?php get_template_part( 'template-parts/content' ); ?>
 
-             <?php
-                previous_post_link();
-                next_post_link();
-            ?>
- 
+                                <div class="pagination d-flex justify-content-between">
+                                    <span class="prev-btn"><?php previous_post_link(); ?></span>
+                                    <span class="next-btn"><?php next_post_link(); ?></span>
+                                </div>
+                            </div>
+
+                    <?php endwhile; ?>
+
+                    <?php else : ?>
+                        <?php get_template_part( 'template-parts/content-none' ); ?>
+                    <?php endif; ?>
+
+                </div>
+
          </div>
          
      </div>

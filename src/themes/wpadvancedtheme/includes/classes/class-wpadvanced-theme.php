@@ -19,6 +19,7 @@ class WPADVANCED_THEME {
         Assets::get_instance();
         Menus::get_instance();
         Meta_boxes::get_instance();
+        Sidebars::get_instance();
 
         // load the setup_hooks() function below
         $this->setup_hooks();

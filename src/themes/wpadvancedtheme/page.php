@@ -18,22 +18,20 @@
 
             <?php if ( have_posts() ) : ?>
 
-                    <?php if ( is_home() && ! is_front_page() ) ?>
+                    <?php if ( ! is_front_page() && ! is_page( '15' ) ) : ?>
                         <header class="mb-5">
-                            <h1 class="page-title"><?php single_post_title(); ?></h1>
+                            <h1 class="page-title"><?php echo get_the_title(); ?></h1>
                         </header>
+                    <?php endif; ?>
 
-                    <div class="row">
                         <?php 
                             // the WP Loop
                             while ( have_posts() ) : the_post(); ?>
 
-                                <div class="col-lg-4 col-md-6 col-sm-12">
-                                    <?php echo get_the_content(); ?>
-                                </div>
+                                <?php echo get_the_content(); ?>
 
                         <?php endwhile; ?>
-                    </div>
+
                     <?php else : ?>
                         <?php get_template_part( 'template-parts/content-none' ); ?>
             <?php endif; ?>

@@ -8,7 +8,7 @@
  */
 ?>
 
-<div class="entry-content">
+<div class="entry-content post-loop">
     <?php if ( is_single() ) : ?>
 
         <?php 
@@ -30,7 +30,7 @@
     <?php wp_link_pages(
         [
             'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wpadvancedtheme' ),
-            'after'  => '</di>',
+            'after'  => '</div>',
         ]
     ) ?>
 
@@ -38,7 +38,7 @@
 
         <?php 
             wpat_the_excerpt( 150 );
-            echo '<p>'. wpat_excerpt_read_more() .'</p>';
+            echo '<div>'. wpat_excerpt_read_more() .'</div>';
         ?>
 
     <?php endif; ?>

@@ -105,7 +105,7 @@ function wpat_the_excerpt( $trim_char_count = 0 ) {
 function wpat_excerpt_read_more( $more = '' ) {
 
     if ( ! is_single() ) {
-        $more = sprintf( '<button class="btn btn-primary mt-4"><a class="text-white" href="%1$s">%2$s</a></button>', 
+        $more = sprintf( '<button class="btn btn-primary"><a class="text-white" href="%1$s">%2$s</a></button>', 
             get_the_permalink( get_the_ID() ),
             __( 'Read More', 'wpadvancedtheme' )
         );
