@@ -41,7 +41,7 @@ class Assets {
 
     // ENQUEUE SCRIPTS
     public function register_scripts() {
-        wp_register_script( 'main-js', WPADVANCEDTHEME_DIR_URI . '/assets/js/main.js', ['jquery'], filemtime( WPADVANCEDTHEME_DIR_PATH . '/assets/js/main.js' ), true);
+        wp_register_script( 'main-js', WPADVANCEDTHEME_DIR_URI . '/assets/src/js/main.js', ['jquery'], filemtime( WPADVANCEDTHEME_DIR_PATH . '/assets/src/js/main.js' ), true);
         wp_register_script( 'bootstrap-js', WPADVANCEDTHEME_DIR_URI . '/assets/src/lib/js/bootstrap.min.js', ['jquery'], false, true);
 
         // Enqueue the specific Stylesheet or Script by the handle
