@@ -27,3 +27,7 @@ article .post-loop button {
     background-color: #dbdbdb;
     padding: 25px 0;
 }
+
+body {
+    font-family: 'Lato', 'San Serif';
+}

@@ -4,14 +4,20 @@
       "@babel/preset-env",
       {
         "targets": {
-          "edge": "17",
-          "firefox": "60",
-          "chrome": "67",
-          "safari": "11.1"
+          "browsers": [
+            "last 2 Chrome Versions",
+            "last 2 Firefox Versions",
+            "last 2 Safari Versions",
+            "last 2 iOS Versions",
+            "last 1 Android Version",
+            "last 1 ChromeAndroid Version",
+            "ie 11"
+          ]
         },
         "useBuiltIns": "usage",
         "corejs": "3.6.5"
       }
-    ]
+    ],
+    "@bable/preset-react"
   ]
 }
