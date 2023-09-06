@@ -4,7 +4,9 @@
   "description": "wpadvancedtheme theme packages",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prod": "cross-env NODE_ENV=production webpack --mode production --progress",
+    "dev": "cross-env NODE_ENV=development webpack --watch --mode development --progress",
+    "clean": "rm -rf build/*"
   },
   "keywords": [
     "wordpress",
@@ -19,15 +21,21 @@
   "devDependencies": {
     "@babel/core": "^7.22.10",
     "@babel/preset-env": "^7.22.10",
+    "@babel/preset-react": "^7.22.5",
+    "@types/optimize-css-assets-webpack-plugin": "^5.0.5",
+    "@types/uglifyjs-webpack-plugin": "^1.1.2",
     "babel-loader": "^9.1.3",
     "clean-webpack-plugin": "^4.0.0",
     "cross-env": "^7.0.3",
     "css-loader": "^6.8.1",
+    "css-minimizer-webpack-plugin": "^5.0.1",
     "cssnano": "^6.0.1",
     "file-loader": "^6.2.0",
     "mini-css-extract-plugin": "^2.7.6",
+    "optimize-css-assets-webpack-plugin": "^6.0.1",
     "sass-loader": "^13.3.2",
     "style-loader": "^3.3.3",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
   }
